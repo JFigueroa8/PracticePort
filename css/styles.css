@@ -295,8 +295,16 @@ li {
             transform: translateX(-50%);
     border-radius: 50%;
     opacity: 1;
-    -webkit-animation: mouse 2s infinite;
-            animation: mouse 2s infinite;
+    /* -webkit-animation: mouse 2s infinite;
+            animation: mouse 2s infinite; */
+    
+    -webkit-animation-name: mouse;
+    
+            animation-name: mouse;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes mouse {
