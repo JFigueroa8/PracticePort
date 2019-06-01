@@ -25,6 +25,7 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
        }, 1000);
+       $('.box').css('visibility', 'hidden');
     });
 
     AOS.init({
