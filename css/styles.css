@@ -724,8 +724,8 @@ li {
 .timeline .date::after {
     content: '';
     /* box-shadow: 0 0 0 4px #57bbfd; */
-    -webkit-box-shadow: 0 0 0 4px #fd57bf;
-            box-shadow: 0 0 0 4px #fd57bf;
+    -webkit-box-shadow: 0 0 0 4px #a32f78;
+            box-shadow: 0 0 0 4px #a32f78;
     border-radius: 100%;
     left: -8rem;
     height: 1.5rem;
@@ -764,8 +764,8 @@ textarea {
 
 input[type="submit"] {
     width: initial; /* changes button back to regular size from full width */
-    background-color: #fd57bf;
-    color: #eee;
+    background-color: #ffe838;
+    color: #221e3f;
     padding: 1rem 2rem;
     border-radius: .8rem;
     cursor: pointer;
@@ -776,8 +776,8 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    color: #221e3f;
-    background-color: #ffe838;
+    background-color: #fd57bf;
+    color: #eee;
 }
 /*End contact*/
 
@@ -828,8 +828,8 @@ input[type="submit"]:hover {
 /*Start animations*/
 @-webkit-keyframes pulse {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(253, 87, 191, .99);
-                box-shadow: 0 0 0 0 rgba(253, 87, 191, .99);
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 232, 56, .99);
+                box-shadow: 0 0 0 0 rgba(255, 232, 56, .99);
     }
 
     70%{
@@ -844,8 +844,8 @@ input[type="submit"]:hover {
 }
 @keyframes pulse {
     0% {
-        -webkit-box-shadow: 0 0 0 0 rgba(253, 87, 191, .99);
-                box-shadow: 0 0 0 0 rgba(253, 87, 191, .99);
+        -webkit-box-shadow: 0 0 0 0 rgba(255, 232, 56, .99);
+                box-shadow: 0 0 0 0 rgba(255, 232, 56, .99);
     }
 
     70%{
