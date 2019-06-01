@@ -28,7 +28,14 @@ $(document).ready(function() {
        $('.box').css('visibility', 'hidden');
     });
 
-    $('#down').on('tap', function() {
+    $('#down').on('tapstart', function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+       }, 1000);
+       $('.box').css('visibility', 'hidden');
+    });
+
+    $('#down').on('touchstart', function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
        }, 1000);
