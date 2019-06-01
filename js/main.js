@@ -28,6 +28,13 @@ $(document).ready(function() {
        $('.box').css('visibility', 'hidden');
     });
 
+    $('#down').on('tap', function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+       }, 1000);
+       $('.box').css('visibility', 'hidden');
+    });
+
     AOS.init({
         easing: 'ease',
         duration: 1800,
