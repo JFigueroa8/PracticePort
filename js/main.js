@@ -21,6 +21,12 @@ $(document).ready(function() {
        }, 2000);
     });
 
+    $('#down').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 50
+       }, 1000);
+    });
+
     AOS.init({
         easing: 'ease',
         duration: 1800,
