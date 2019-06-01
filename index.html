@@ -41,13 +41,16 @@
         <div class="landing-text">
             <h1>Julmar Figueroa</h1>
             <h6>Web Developer | Gamer | Dog Lover</h6>
+            <div class="middle">
+                <div class="mouse"></div>
+            </div>
         </div>
     </header>
 
     <section class="about" id="about">
         <div class="container">
             <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-                <img src="images/meB&W.jpg" alt="">
+                <img src="images/meB&W.jpg" alt="Picture of Julmar">
             </div>
             <div class="about-details" data-aos="fade-left" data-aos-delay="600">
                 <div class="about-heading">
@@ -55,23 +58,18 @@
                     <h6>Myself</h6>
                 </div>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos reiciendis sapiente voluptatibus expedita iste, rerum eveniet earum at? Itaque ducimus porro non qui harum suscipit eveniet dolorem nihil reiciendis eos. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non distinctio, sequi expedita fugit iste incidunt officiis consequatur hic eius harum totam qui a eligendi, alias dolores et ducimus. Quos, illum?
+                    I am a self-taught developer looking to grow my skills every day by building fully functional responsive websites using HTML, CSS, JavaScript and jQuery. If I'm not on my computer, you can catch me with my dogs, at the basketball court or playing games with my friends.
                 </p>
                 <div class="social-media">
-                    <ul class="nav-list">
+                    <ul class="nav-list icons">
                         <li>
-                            <a href="#" class="icon-link">
-                                <i class="fab fa-facebook-square"></i>
+                            <a target="_blank" href="https://github.com/JFigueroa8" class="icon-link">
+                                <i class="fab fa-github"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="icon-link">
-                                <i class="fab fa-twitter-square"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="icon-link">
-                                <i class="fab fa-dribbble-square"></i>
+                            <a target="_blank" href="https://www.linkedin.com/in/julmarfigueroa/" class="icon-link">
+                                <i class="fab fa-linkedin-in"></i>
                             </a>
                         </li>
                     </ul>
@@ -80,7 +78,7 @@
         </div>
     </section>
 
-    <section class="services" id="services">
+    <!-- <section class="services" id="services">
         <div class="container">
             <div class="section-heading">
                 <h1>Services</h1>
@@ -119,7 +117,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section class="portfolio" id="portfolio">
         <div class="container">
@@ -129,35 +127,51 @@
             </div>
             <div class="portfolio-item">
                 <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/portitem1.jpeg" alt="">
+                    <a href="http://omnifood.julmarfigueroa.com/" target="_blank">
+                        <img class="omni-img" src="images/Omnifood.png" alt="Photo of Omnifood project">
+                    </a>
+                    <!-- <img src="images/Omnifood.png" alt="Photo of Omnifood project"> -->
                 </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
+                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="500">
                     <h6>Web Development</h6>
-                    <h1>Blog Website</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="cta">View Details</a>
+                    <h1>Omnifood</h1>
+                    <p>Created while completing Udemy course by Jonas Schmedtmann. Implemented animations and responsive design</p><br>
+                    <!-- <p>HTML | CSS | JAVASCRIPT | JQUERY</p> -->
+                    <a href="http://omnifood.julmarfigueroa.com/" class="cta project" target="_blank">Project</a>
+                    <p class="divider">/</p>
+                    <a href="https://github.com/JFigueroa8/Omnifood" class="cta github" target="_blank">Github</a>
                 </div>
             </div>
             <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="900">
-                    <h6>Web Design</h6>
-                    <h1>Product Layout</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="cta">View Details</a>
+                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="700">
+                    <h6>Web Development</h6>
+                    <h1>MovieInfo</h1>
+                    <p>Integrated search functionality, movie posters and movie names using OBDB API. Added ability to also view more movie details such as ratings and genres by visiting IMDB</p><br>
+                    <!-- <p>HTML | CSS | JAVASCRIPT | JQUERY</p> -->
+                    <a href="http://movieinfo.julmarfigueroa.com/" class="cta project" target="_blank">Project</a>
+                    <p class="divider">/</p>
+                    <a href="https://github.com/JFigueroa8/MovieInfo" class="cta github" target="_blank">Github</a>
                 </div>
-                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="1200">
-                    <img src="images/portitem2.jpeg" alt="">
+                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="900">
+                    <a href="http://movieinfo.julmarfigueroa.com/" target="_blank">
+                        <img class="movie-img" src="images/MovieInfo.jpg" alt="Photo of MovieInfo project">
+                    </a>
                 </div>
             </div>
             <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1500">
-                    <img src="images/portitem3.jpeg" alt="">
+                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="1100">
+                    <a href="http://pixelart.julmarfigueroa.com/" target="_blank">
+                        <img class="pixel-img" src="images/PixelArtMaker.png" alt="Photo of PixelArtMaker project">
+                    </a>
                 </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1800">
-                    <h6>Web Design</h6>
-                    <h1>Product Sketch</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                    <a href="#" class="cta">View Details</a>
+                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="1300">
+                    <h6>Web Development</h6>
+                    <h1>Pixel Art Maker</h1>
+                    <p>Allows the user to enter a height and width in order to customize the size of their grid. Added the abiliity to pick any color from multiple color palettes</p><br>
+                    <!-- <p>HTML | CSS | JAVASCRIPT</p> -->
+                    <a href="http://pixelart.julmarfigueroa.com/" class="cta project" target="_blank">Project</a>
+                    <p class="divider">/</p>
+                    <a href="https://github.com/JFigueroa8/PixelArtMaker" class="cta github" target="_blank">Github</a>
                 </div>
             </div>
         </div>
