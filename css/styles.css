@@ -532,6 +532,10 @@ li {
     opacity: .3;
 }
 
+.timeline p {
+    font-size: 1.6rem;
+}
+
 .timeline .date {
     border-bottom: 1px solid rgba(255, 255, 255, .1);
     margin-bottom: 1rem;
