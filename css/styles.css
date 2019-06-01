@@ -223,8 +223,50 @@ li {
 }
 
 .landing-text h6 {
-    font-size: 2rem;
+    font-size: 4rem;
     font-weight: 300;
+    margin-top: 3rem;
+}
+
+.middle {
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mouse {
+    width: 5rem;
+    height: 7rem;
+    /* width: 100px;
+    height: 180px; */
+    border: 4px solid white;
+    border-radius: 60px;
+}
+
+.mouse::before {
+    content:"";
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    background: white;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    opacity: 1;
+    animation: mouse 2s infinite;
+}
+
+@keyframes mouse {
+    from {
+        opacity: 1;
+        top: 1rem;
+    }
+    to {
+        opacity: 0;
+        top: 4rem;
+    }
 }
 
 /*End header*/
@@ -262,6 +304,12 @@ li {
     margin-right: 5rem;
 }
 
+.profile-img img{
+    border: .5rem solid white;
+    border-radius: 50%;
+    /* border-radius: 10px 100px / 120px; */
+}
+
 .about-details {
     flex: 1;
 }
@@ -270,22 +318,71 @@ li {
     margin-top: 5rem;
 }
 
-.social-media i {
+/* .social-media i {
     font-size: 5rem;
     transition: color 650ms;
 }
 
-.fa-facebook-square:hover {
-    color: #4267b2;
+.fa-github-square:hover {
+    color: #232a2e;
 }
 
-.fa-twitter-square:hover {
-    color: #38a1f3;
+.fa-linkedin:hover {
+    color: #0077b5;
+} */
+
+.icons li a {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    text-align: center;
+    line-height: 90px;
+    font-size: 35px;
+    margin: 0 10px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
 }
 
-.fa-dribbble-square:hover {
-    color: #ea4c89;
-}
+.icons li a .fab {
+    position: relative;
+    color: #262626;
+    font-size: 50px;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  .icons li a:hover .fab {
+    color: #fff;
+    transform: rotateY(360deg);
+  }
+  
+  .icons li a:before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  .icons li a:hover:before {
+    top: 0;
+  }
+  
+  .icons li:nth-child(1) a:before {
+    background: #232A2E;
+  }
+  
+  .icons li:nth-child(2) a:before {
+    background: #0077b5;
+  }
+
 /*End about*/
 
 
@@ -373,7 +470,7 @@ li {
 
 .portfolio-description .cta {
     display: inline-block;
-    margin-top: 2.5rem;
+    margin-top: .5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
     color: #3883ff;
@@ -383,6 +480,32 @@ li {
 .portfolio-description .cta:hover {
     color: #2f67cd;
 }
+
+.portfolio-description .divider {
+    display: inline;
+}
+
+.portfolio-description .project {
+    margin-right: 1rem;
+}
+
+.portfolio-description .github {
+    margin-left: 1rem;
+}
+
+.portfolio-img .omni-img {
+    border: .5rem solid white;
+    
+}
+
+.portfolio-img .movie-img {
+    border: .5rem solid white;
+}
+
+.portfolio-img .pixel-img {
+    border: .5rem solid white;
+}
+
 /*End portfolio*/
 
 
@@ -558,7 +681,21 @@ input[type="submit"]:hover {
 
 /*Start media queries*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+    .nav-link {
+        font-size: 3.5rem;
+    }
+
+    .middle {
+        visibility: hidden;
+    }
+
+    .landing-text h6 {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 900px) {
     body {
         background: url('../images/sitebg2.jpg') no-repeat center fixed;
         background-size: cover;
@@ -620,9 +757,13 @@ input[type="submit"]:hover {
     .timeline .date::after {
         left: -5.9rem;
     }
+
+    header {
+        height: 80vh;
+    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
     .menu-toggle {
         top: 2rem;
         right: 2rem;
@@ -676,6 +817,10 @@ input[type="submit"]:hover {
 
     .up {
         right: 2rem;
+    }
+
+    header {
+        height: 80vh;
     }
 }
 /*End media queries*/
