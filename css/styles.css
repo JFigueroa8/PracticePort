@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
-/* @import url('https://fonts.googleapis.com/css?family=Great+Vibes&display=swap'); */
 
 /*Start global*/
 * {
@@ -150,9 +149,8 @@ li {
 
 .nav-link:hover, 
 .nav-link:focus {
-    /* background: linear-gradient(to top, #ffe838, #57bbfd); */
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffe838), to(#fd57bf));
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: -webkit-gradient(linear, left bottom, left top, from(#ffe838), to(#57bbfd));
+    background: linear-gradient(to top, #ffe838, #57bbfd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -192,9 +190,8 @@ li {
 }
 
 .bar {
-    /* background: linear-gradient(to right, #ffe838, #57bbfd); */
-    background: -webkit-gradient(linear, left top, right top, from(#ffe838), to(#fd57bf));
-    background: linear-gradient(to right, #ffe838, #fd57bf);
+    background: -webkit-gradient(linear, left top, right top, from(#ffe838), to(#57bbfd));
+    background: linear-gradient(to right, #ffe838, #57bbfd);
     width: 100%;
     height: 4px;
     border-radius: .8rem;
@@ -248,9 +245,7 @@ li {
 .landing-text h1 {
     font-size: 20rem;
     font-family: 'Dancing Script', sans-serif;
-    /* background: linear-gradient(to top, #ffe838, #57bbfd); */
-    background: -webkit-gradient(linear, left bottom, left top, from(#ffe838), to(#fd57bf));
-    background: linear-gradient(to top, #ffe838, #fd57bf);
+    background: linear-gradient(to top, #ffe838, #57bbfd);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     padding: 1rem;
@@ -266,7 +261,7 @@ li {
     margin-top: 3rem;
 }
 
-.middle {
+.arrows-container {
     position: absolute;
     top: 150%;
     left: 50%;
@@ -274,15 +269,7 @@ li {
             transform: translate(-50%, -50%);
 }
 
-.box {
-    position: absolute;
-    top: 150%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-}
-
-.box span {
+.arrows-container span {
     display: block;
     width: 30px;
     height: 30px;
@@ -295,12 +282,12 @@ li {
             animation: animate 2s infinite;
 }
 
-.box span:nth-child(2) {
+.arrows-container span:nth-child(2) {
     -webkit-animation-delay: -0.2s;
             animation-delay: -0.2s;
 }
 
-.box span:nth-child(3) {
+.arrows-container span:nth-child(3) {
     -webkit-animation-delay: -0.4s;
             animation-delay: -0.4s;
 }
@@ -383,7 +370,6 @@ li {
 .profile-img img{
     border: .5rem solid white;
     border-radius: 50%;
-    /* border-radius: 10px 100px / 120px; */
 }
 
 .about-details {
@@ -491,6 +477,8 @@ li {
     font-size: 3rem;
     font-weight: 300;
     margin: 1rem 0;
+    color: #ffe838;
+    opacity: .7;
 }
 
 .portfolio-description h6 {
@@ -546,7 +534,7 @@ li {
 
 /*Start timeline*/
 .timeline ul {
-    border-left: 4px solid #ffe838;
+    border-left: 4px solid rgba(255, 232, 56, .7);
     border-radius: .8rem;
     background-color: rgba(0, 0, 0, 0.05);
     margin: 0 auto;
@@ -563,6 +551,15 @@ li {
     font-weight: 300;
     margin-bottom: 1rem;
     opacity: .3;
+}
+
+.timeline h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color: #ffe838;
+    opacity: .7;
 }
 
 .timeline p {
@@ -601,14 +598,13 @@ li {
 
 .timeline .date::after {
     content: '';
-    /* box-shadow: 0 0 0 4px #57bbfd; */
-    -webkit-box-shadow: 0 0 0 4px #a32f78;
-            box-shadow: 0 0 0 4px #a32f78;
+    -webkit-box-shadow: 0 0 0 2px #ffffff;
+            box-shadow: 0 0 0 2px #ffffff;
     border-radius: 100%;
     left: -8rem;
     height: 1.5rem;
     width: 1.5rem;
-    background-color: #313534;
+    background-color: #ffffff;
 }
 /*End timeline*/
 
@@ -617,47 +613,55 @@ li {
 
 
 /*Start contact*/
-.contact {
-    background-color: #221e3f;
+
+.boxes {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 1rem;
 }
 
-form {
-    width: 70%;
-    margin: 0 auto;
+.boxes div {
+    font-size: 1.4rem;
+    border: 2px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    -webkit-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
 }
 
-form label {
-    font-size: 1.5rem;
+.boxes div:hover {
+    padding: 0.5rem 1.5rem;
+    background: rgba(255, 232, 56, .7);
+    color: #000;
 }
 
-input,
-select,
-textarea {
-    width: 100%;
-    padding: 1rem;
-    margin-bottom: 5px;
-    border: none;
-    outline-color: #fd57bf;
+.boxes div:hover a {
+    color: #000;
 }
 
-input[type="submit"] {
-    width: initial; /* changes button back to regular size from full width */
-    background-color: #ffe838;
-    color: #221e3f;
-    padding: 1rem 2rem;
-    border-radius: .8rem;
-    cursor: pointer;
-    -webkit-transition: background-color 650ms ease-in;
-    transition: background-color 650ms ease-in;
-    -webkit-transition: color 250ms ease-in;
-    transition: color 250ms ease-in;
+.boxes div:hover span {
+    color: #000;
+    opacity: 1;
 }
 
-input[type="submit"]:hover {
-    background-color: #fd57bf;
-    color: #eee;
+.boxes div p {
+    font-size: 2rem;
+    font-weight: 500;
 }
-/*End contact*/
+
+.text-secondary {
+    color: #ffe838;
+    opacity: .7;
+}
 
 
 
@@ -900,6 +904,10 @@ input[type="submit"]:hover {
 
     header {
         height: 80vh;
+    }
+
+    .boxes {
+        flex-direction: column;
     }
 }
 /*End media queries*/
