@@ -10,6 +10,7 @@ $(document).ready(function() {
     });
 
     $('nav a[href*="#"]').on('click', function() {
+       $('.arrows-container').css('visibility', 'hidden');
        $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 100
        }, 2000);
@@ -25,14 +26,14 @@ $(document).ready(function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
        }, 1000);
-       $('.box').css('visibility', 'hidden');
+       $('.arrows-container').css('visibility', 'hidden');
     });
 
     $('#down').on('tapstart', function() {
         $('html, body').animate({
             scrollTop: $($(this).attr('href')).offset().top - 50
        }, 1000);
-       $('.box').css('visibility', 'hidden');
+       $('.arrows-container').css('visibility', 'hidden');
     });
 
     AOS.init({
