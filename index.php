@@ -226,7 +226,7 @@
                     <h1>Contact</h1>
                     <h6>Let's work together</h6>
                 </div>
-                <form method="post" action="index.php" data-aos="fade-up" data-aos-delay="300">
+                <form method="post" action="" data-aos="fade-up" data-aos-delay="300">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" placeholder="Enter your name..." required>
                     <label for="name">Email:</label>
