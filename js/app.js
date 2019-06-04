@@ -158,7 +158,7 @@
                         
     
                         markup = `
-                            <a target="_blank" href='www.youtube.com/embed/${youtube_key}?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=en&modestbranding=1&fs=1&autohide=1'>
+                            <a target="_blank" href='https://www.youtube.com/embed/${youtube_key}?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=en&modestbranding=1&fs=1&autohide=1'>
                                 <button class="trailer-button">Trailer</button>
                             </a>
                          `;
