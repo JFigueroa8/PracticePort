@@ -95,7 +95,8 @@ function getMovies(searchText) {
             for(let i = 0; i < data.results.length; i++) {
                 if(data.results[i].poster_path !== null) {
                     let overview = `${data.results[i].overview}`; //replace with your string.
-                    let maxLength = 469 // maximum number of characters to extract
+                    let maxLength = 400 // maximum number of characters to extract
+                    // let maxLength = 469 // maximum number of characters to extract
                     if(overview.length > maxLength) {
                         
                         let trimmedOverview = overview.substr(0, maxLength); //trim the string to the maximum length
@@ -113,13 +114,15 @@ function getMovies(searchText) {
                         <div class="img-box">
                             <img src=${imageBaseURL + data.results[i].poster_path} alt="">
                         </div>
-                        <div class="content" id="content${i}">
+                        <div class="content" id="button-${i}">
                             <h2>${data.results[i].title}<br><span>Rating ${data.results[i].vote_average}</span></h2>
                             <h2>Overview</h2>
                             <p>${trimmedOverview}</p>
-                            <a target="_blank" href=${movieURL + data.results[i].id}>
-                                <button class="details-button">Details</button>
-                            </a>
+                            <div class="buttons" id="button-${i}">
+                                <a target="_blank" href=${movieURL + data.results[i].id}>
+                                    <button class="details-button">Details</button>
+                                </a>
+                            </div>
                         </div>
                     `;
                     node = document.createElement('div');
@@ -147,7 +150,7 @@ function getMovies(searchText) {
                     node.target="_blank";
                     node.href=`https://www.youtube.com/embed/${youtube_key}?autoplay=1&origin=https%3A%2F%2Fwww.themoviedb.org&hl=en&modestbranding=1&fs=1&autohide=1`;
                     node.innerHTML = markup;
-                    document.getElementById(`content${j}`).appendChild(node);
+                    document.getElementById(`button-${j}`).appendChild(node);
                 });
             }
         })            
