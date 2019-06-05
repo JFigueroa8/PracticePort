@@ -215,7 +215,7 @@ input[type="text"] {
 #search_bar {
   text-align: center;
   padding: 5em 0;
-  border: 5px solid #eee;
+  /* border: 5px solid #eee; */
   background: rgba(0, 0, 0, .4);
   /* opacity: .1; */
 }
