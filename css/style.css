@@ -323,14 +323,14 @@ input:focus {
   
 } */
 
-/* @media screen and (max-width: 600px) {
-  #container {
+@media screen and (max-width: 600px) {
+  /* #container {
     display: flex;
     flex-direction: column;
-  }
+  } */
 
   h1 {
     font-size: 2em;
     margin-bottom: 2rem;
   }
-} */
+}
