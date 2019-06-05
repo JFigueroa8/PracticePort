@@ -8,34 +8,22 @@
 }
 
 body {
+  /* background-color:#58D6E3; */
+  /* background-color:#3FAA96; */
   background-color:#deddcd;
   font-size: 16px;
 }
 
-header {
-  background: white;
-  padding-top: 1em;
-  padding-right: .5em;
-  padding-bottom: 1em;
-  padding-left: 6em;
-}
-
-nav li {
-  list-style-type: none;
-}
-
-nav li a {
-  text-decoration: none;
-}
-
-nav li a:link,
-nav li a:visited {
-  color: red;
-}
-
-nav li a:hover,
-nav li a:active {
-  color: yellow;
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+  /* text-shadow: 0px 2px 6px #333; */
+  color: #fff;
+  /* color: #3FAA96; */
+  /* color: rgb(106, 158, 226); */
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  /* text-shadow: 0px 1px 1px #fff; */
 }
 
 input[type="text"] {
@@ -45,6 +33,184 @@ input[type="text"] {
 ::-webkit-scrollbar { 
   display: none; 
 }
+
+/* ======================================================================== */
+/* Search bar */
+/* ======================================================================== */
+
+
+/* #search_bar {
+  text-align: center;
+  padding: 5em 0;
+  border: 2px solid #eee;
+  background: #3FAA96 url(images/popcorn-background.jpg);
+  background-size:     contain;                      
+  background-repeat:   no-repeat;
+  background-position: center center;
+  
+  background-image: url(images/movie-snacks.png);
+  background: rgba(0, 0, 0, .4);
+  opacity: .1;
+} */
+.jumbotron h1 {
+  margin-bottom: 1rem;
+}
+#search_bar {
+  /* width: 100%; */
+  /* height: 100%; */
+  /* min-width: 100%; */
+  /* min-height: 100%; */
+  padding: 5em 0;
+  border: 2px solid #eee;
+  position: relative;
+}
+#search_bar::before {
+  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url(images/popcorn-background.jpg);
+  /* background-size: cover; */
+  background-size: 4em;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  opacity: 0.4;
+}
+#search_bar::after {
+  background: #00aeff;
+  /* background: rgb(122, 122, 122); */
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+.jumbotron {
+  /* color: #fff;
+  text-shadow: #343a40 2px 2px;
+  position: relative; */
+  text-align: center;
+}
+
+.jumbotron::before {
+  content: "";
+  display: block;
+  position: absolute;
+  margin-left: 5%;
+  min-width: 90%;
+  min-height: 13em;
+  z-index: -1;
+  opacity: 0.4;
+  background: #000;
+  border-radius: 8rem;
+}
+
+/* .jumbotron {
+  text-align: center;
+} */
+
+input {
+  font-family: 'Montserrat';
+  background: rgb(106, 158, 226);
+  width: 20px;
+  height: 20px;
+  padding: 20px;
+  border-radius: 30px;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  font-size: 1.6em;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(131, 185, 202);
+}
+
+input:-ms-input-placeholder {
+  color: rgb(131, 185, 202);
+}
+
+input::-ms-input-placeholder {
+  color: rgb(131, 185, 202);
+}
+
+input::placeholder {
+  color: rgb(131, 185, 202);
+}
+
+input:focus {
+  outline: none;
+}
+
+#search-btn {
+  width: 22px;
+  margin: 9px 0 0 10px;
+  position: absolute;
+  cursor: pointer;
+}
+
+#tip {
+  /* color: rgb(106, 158, 226); */
+  color: #fff;
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  /* text-shadow: 0px .5px .5px #fff; */
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  text-align: left;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin-top: 1.5rem;
+}
+
+/* .search_contain:before {
+  content: '';
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  border: 3px solid white;
+  position: absolute;
+  -webkit-animation: grow 1s 3;
+          animation: grow 1s 3;
+} */
+
+.search-results-count h1{
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #fff;
+  /* color: #e61a1a; */
+  /* color: #ff1e00; */
+  /* color: #ffeb3b; */
+  /* text-shadow: 0px 1px 1px #fff; */
+  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+
+
+/* ======================================================================== */
+/* Search bar end */
+/* ======================================================================== */
 
 #movie-container {
   display: -webkit-box;
@@ -112,7 +278,7 @@ input[type="text"] {
   border-radius: 10px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  height: 440px;
+  /* height: 440px; */
   width: auto;
   margin-bottom: 2em;
   -webkit-box-shadow: 16px 16px 16px -1px #363636;
@@ -167,11 +333,13 @@ input[type="text"] {
   margin: 0 0 10px;
   padding: 0;
   color: #fff;
+  /* font-size: .9rem; */
   font-size: 20px;
 }
 
 #container .card .content h2 span {
   color: #ffeb3b;
+  /* font-size: .7rem; */
   font-size: 16px;
 }
 
@@ -179,6 +347,7 @@ input[type="text"] {
   margin: 0;
   padding: 0;
   color: #fff;
+  /* font-size: .6rem; */
   font-size: 16px;
 }
 
@@ -203,11 +372,19 @@ input[type="text"] {
 #container .card .content ul li a {
   color: #fff;
   padding: 0 10px;
+  /* font-size: 1rem; */
   font-size: 18px;
 }
 
 .content > a {
   text-decoration: none;
+}
+
+.buttons {
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .details-button {
@@ -216,7 +393,8 @@ input[type="text"] {
   color: #fff;
   padding: 0.5em 1em;
   border-radius: 100px;
-  font: inherit;
+  font-size: .9rem;
+  /* font: inherit; */
   background: linear-gradient(135deg, #1a9be6, #1a57e6);
   border: none;
   outline: none;
@@ -229,126 +407,17 @@ input[type="text"] {
   color: #fff;
   padding: 0.5em 1em;
   border-radius: 100px;
-  font: inherit;
+  font-size: .9rem;
+  /* font: inherit; */
   background: linear-gradient(135deg, #e6321a, #e61a1a);
   border: none;
   outline: none;
   margin-top: 2rem;
 }
 
-
-/* ======================================================================== */
-/* Search bar tutorial */
-/* ======================================================================== */
-
-
-#search_bar {
-  text-align: center;
-  padding: 5em 0;
-  border: 2px solid #eee;
-  background: rgba(0, 0, 0, .4);
-  /* opacity: .1; */
-}
-
-h1 {
-  font-size: 3.5em;
-  margin-bottom: 2rem;
-  /* text-shadow: 0px 2px 6px #333; */
-  /* color: #fff; */
-  color: rgb(106, 158, 226);
-  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
-  /* text-shadow: 0px 1px 1px #fff; */
-}
-
-.jumbotron {
-  text-align: center;
-}
-
-input {
-  font-family: 'Montserrat';
-  background: rgb(106, 158, 226);
-  width: 20px;
-  height: 20px;
-  padding: 20px;
-  border-radius: 30px;
-  border: 2px solid white;
-  color: white;
-  cursor: pointer;
-  font-size: 1.6em;
-  -webkit-transition: width 1s ease;
-  transition: width 1s ease;
-}
-
-input::-webkit-input-placeholder {
-  color: rgb(131, 185, 202);
-}
-
-input:-ms-input-placeholder {
-  color: rgb(131, 185, 202);
-}
-
-input::-ms-input-placeholder {
-  color: rgb(131, 185, 202);
-}
-
-input::placeholder {
-  color: rgb(131, 185, 202);
-}
-
-input:focus {
-  outline: none;
-}
-
-#search-btn {
-  width: 22px;
-  margin: 9px 0 0 10px;
-  position: absolute;
-  cursor: pointer;
-}
-
-#tip {
-  color: rgb(106, 158, 226);
-  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
-  /* text-shadow: 0px .5px .5px #fff; */
-  text-transform: uppercase;
-  font-size: .8em;
-  text-align: left;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: opacity 2s;
-  transition: opacity 2s;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  margin-top: 1rem;
-}
-
-.search-contain:before {
-  content: '';
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  border: 3px solid white;
-  position: absolute;
-  -webkit-animation: grow 1s 3;
-          animation: grow 1s 3;
-}
-
-.search-results-count h1{
-  margin-top: 2rem;
-  margin-bottom: 0;
-  /* color: #fff; */
-  color: #e61a1a;
-  /* color: #ff1e00; */
-  /* color: #ffeb3b; */
-  /* text-shadow: 0px 1px 1px #fff; */
-  text-shadow: -1px -1px 0px rgba(255,255,255,0.3), 1px 1px 0px rgba(0,0,0,0.8);
-}
+/* ========================================================================== */
+/*  Keyframes and media queries start */
+/* ========================================================================== */
 
 @-webkit-keyframes grow {
   from {
@@ -398,22 +467,72 @@ input:focus {
   }
 }
 
-/* ======================================================================== */
-/* Search bar tutorial end */
-/* ======================================================================== */
-
-/* @media screen and (max-width: 768px) {
-  
-} */
-
-@media screen and (max-width: 600px) {
-  /* #container {
-    display: flex;
-    flex-direction: column;
-  } */
-
+@media screen and (max-width: 768px) {
   h1 {
-    font-size: 1.5em;
+    font-size: 3em;
     margin-bottom: 2rem;
   }
+
+  .jumbotron::before {
+    min-height: 12.5em;
+  }
+
+  #tip {
+    font-size: 1rem;
+  }
 }
+
+@media screen and (max-width: 600px) {  
+  h1 {
+    font-size: 1.9em;
+    margin-bottom: 2rem;
+  }
+
+  .jumbotron::before {
+    min-height: 11em;
+  }
+
+  #tip {
+    font-size: .8rem;
+  }
+}
+
+@media screen and (max-width: 400px) {  
+  h1 {
+    font-size: 1.7em;
+  }
+
+  .jumbotron::before {
+    min-height: 10em;
+  }
+
+  .details-button {
+    font-size: .5rem;
+    margin-top: 1rem;
+  }
+  
+  .trailer-button {
+    font-size: .5rem;
+    margin-top: 1rem;
+  }
+
+  #container .card .content h2 {
+    font-size: .9rem;
+  }
+  
+  #container .card .content h2 span {
+    font-size: .7rem;
+  }
+  
+  #container .card .content p {
+    font-size: .79rem;
+  }
+  
+  #container .card .content ul li a {
+    font-size: 1rem;
+  }
+}
+
+/* ========================================================================== */
+/*  Keyframes and media queries end */
+/* ========================================================================== */
