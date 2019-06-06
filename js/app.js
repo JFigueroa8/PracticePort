@@ -87,6 +87,11 @@ function getMovies(searchText) {
                     node.parentNode.removeChild( node );
                 });
             }
+
+            if (data.results.length === 0) {
+                document.getElementById('container').style.height = '100vh';
+            }
+
             node = document.createElement('div');
             node.classList.add('search-results-count');
             node.innerHTML = markup;
