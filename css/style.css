@@ -10,7 +10,7 @@
 body {
   /* background-color:#58D6E3; */
   /* background-color:#3FAA96; */
-  background-color:#deddcd;
+  /* background-color:#deddcd; */
   /* background-color:#fff; */
   font-size: 16px;
 }
@@ -66,8 +66,7 @@ input[type="text"] {
   position: relative;
 }
 #search_bar::before {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 255, 0.5)), to(rgba(255, 255, 0, 0.5))), url(images/movie-popcorn.jpg);
-  background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5)), url(images/movie-popcorn.jpg);
+  background-image: url(images/movie-popcorn.jpg);
   /* background-size: cover; */
   background-size: 100%;
   content: "";
@@ -81,7 +80,8 @@ input[type="text"] {
   opacity: 0.4;
 }
 #search_bar::after {
-  background: #00aeff;
+  background: rgba(1, 175, 255, 0.42);
+  /* background: rgba(1, 175, 255, 0.42); */
   /* background: rgb(122, 122, 122); */
   content: "";
   display: block;
@@ -142,7 +142,8 @@ input[type="text"] {
 input {
   font-family: 'Montserrat';
   /* background: rgb(255, 0, 0); */
-  background: rgb(0, 110, 255);
+  background: #599FBC;
+  /* background: rgb(0, 110, 255); */
   /* background: rgb(106, 158, 226); */
   width: 20px;
   height: 20px;
@@ -157,19 +158,19 @@ input {
 }
 
 input::-webkit-input-placeholder {
-  color: rgb(194, 194, 194);
+  color: #fff;
 }
 
 input:-ms-input-placeholder {
-  color: rgb(194, 194, 194);
+  color: #fff;
 }
 
 input::-ms-input-placeholder {
-  color: rgb(194, 194, 194);
+  color: #fff;
 }
 
 input::placeholder {
-  color: rgb(194, 194, 194);
+  color: #fff;
 }
 
 input:focus {
@@ -206,7 +207,7 @@ input:focus {
   margin-top: 1.5rem;
 }
 
-/* .search_contain:before {
+.search_contain:before {
   content: '';
   border-radius: 50%;
   width: 38px;
@@ -215,7 +216,7 @@ input:focus {
   position: absolute;
   -webkit-animation: grow 1s 3;
           animation: grow 1s 3;
-} */
+}
 
 .search-results-count h1{
   margin-top: 2rem;
@@ -252,8 +253,7 @@ input:focus {
   position: relative;
 }
 .movies::before {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 0, 0.5)), to(rgba(0, 0, 255, 0.5))), url(images/popcorn-background.jpg);
-  background-image: linear-gradient(rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)), url(images/popcorn-background.jpg);
+  background-image: url(images/popcorn-background.jpg);
   /* background-size: cover; */
   background-size: 20rem;
   content: "";
@@ -289,7 +289,7 @@ input:focus {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100vh;
-  opacity: .8;
+  opacity: .95;
 }
 
 #comedy {
