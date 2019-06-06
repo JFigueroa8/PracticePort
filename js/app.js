@@ -51,8 +51,8 @@ document.getElementById('searchText').addEventListener('keypress', function(e) {
     if (key === 13) {
         let searchText = document.getElementById('searchText').value;
         document.getElementById('container').style.display = 'flex';
+        document.getElementById('moving-posters').style.display = 'none';
         getMovies(searchText);
-        document.getElementById('movie-container').style.display = 'none';
         
         e.preventDefault();
     }
