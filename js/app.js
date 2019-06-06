@@ -1,5 +1,6 @@
 let moveRight = 0;
 let moveLeft = 0;
+
 setInterval(function() {
     moveRight+=1;
     moveLeft-=1;
@@ -20,7 +21,7 @@ const tip = document.getElementById('tip');
 
 let i = 0;
 let message = "Search for a movie...";
-let speed = 100;
+let speed = 85;
 
 searchBtn.addEventListener('click', () => {
     search.style.width = '80%';
@@ -94,15 +95,13 @@ function getMovies(searchText) {
 
             for(let i = 0; i < data.results.length; i++) {
                 if(data.results[i].poster_path !== null) {
-                    let overview = `${data.results[i].overview}`; //replace with your string.
+                    let overview = `${data.results[i].overview}`; // replace with your string.
                     let maxLength = 400 // maximum number of characters to extract
-                    // let maxLength = 469 // maximum number of characters to extract
                     if(overview.length > maxLength) {
                         
-                        let trimmedOverview = overview.substr(0, maxLength); //trim the string to the maximum length
+                        let trimmedOverview = overview.substr(0, maxLength); // trim the string to the maximum length
 
-                        //re-trim if we are in the middle of a word
-                        trimmedOverview = trimmedOverview.substr(0, Math.min(trimmedOverview.length, trimmedOverview.lastIndexOf(".")))
+                        trimmedOverview = trimmedOverview.substr(0, Math.min(trimmedOverview.length, trimmedOverview.lastIndexOf("."))); // re-trim if we are in the middle of a word
                         trimmedOverview += '.';
                     } else {
                         trimmedOverview = overview;
